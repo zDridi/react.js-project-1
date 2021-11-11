@@ -41,14 +41,14 @@
     </script>
 
 
-    <!-- Avec les composants -->
+    <!-- Class Component -->
     <div id="react-root-3"></div>
     <script type="text/babel">
         class Bonjour extends React.Component{
             render(){
                 return (
                     <div>
-                        <h1>Bonjour Composant React ! </h1>
+                        <h1>Bonjour React - Class Component ! </h1>
                     </div>    
                     )
             }
@@ -59,7 +59,18 @@
             document.getElementById('react-root-3')
         )
     </script>
+
+    <!-- Functional Component -->
+    <div id="react-root-4"></div>
+    <script type="text/babel">
     
+        var Bonjour = () =>(<h1>Bonjour React - Functional Component !</h1>)
+    
+        ReactDOM.render(
+            <Bonjour/>,
+            document.getElementById('react-root-4')
+        )
+    </script>    
     
 </body>
 </html>
