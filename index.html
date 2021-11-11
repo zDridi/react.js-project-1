@@ -114,8 +114,26 @@
         }
     
         ReactDOM.render(
-            <Bonjour message="Bonjour props.message de React !" version={16} />,
+            <Bonjour message="Bonjour props.message de classe de composant - React !" version={16} />,
             document.getElementById('react-root-5')
+        )
+    </script>   
+
+
+    <!-- Proprietes des composants fonctionnels - donnees dynamiques-->
+    <div id="react-root-6"></div>
+    <script type="text/babel">
+    
+        const Bonjour = (props) =>(
+            <div>
+                <h1>{props.message}</h1>
+                <p>Vous apprenez ici la version {props.version} de React.js</p>
+            </div>    
+        )
+    
+        ReactDOM.render(
+            <Bonjour message="Bonjour props.message de composant fonctionnel - React !" version={16} />,
+            document.getElementById('react-root-6')
         )
     </script>   
     
