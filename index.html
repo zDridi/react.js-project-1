@@ -10,15 +10,17 @@
     <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
 
+    <!-- Babel pour la precompilation de JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
 
 </head>
 <body>
 
 
-    <div id="react-root"></div>
- 
 
     <!-- Sans JSX -->
+    <div id="react-root"></div>
     <script>    
             ReactDOM.render(
                 React.createElement('h1',null,"Bonjour React !"),
@@ -26,6 +28,18 @@
             )
     </script>
 
+    
+
+    <!-- JSX -->
+    <div id="react-root-2"></div>
+    <script type="text/babel">
+        ReactDOM.render(
+    
+            <h1> Bonjour React et JSX ! </h1>,
+            document.getElementById('react-root-2')
+        )
+    </script>
+    
     
 </body>
 </html>
