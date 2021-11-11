@@ -13,6 +13,20 @@
     <!-- Babel pour la precompilation de JSX -->
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #compBonjour {
+            color: blueviolet;
+        }
+
+        .backgroundTtre{
+            background-color: yellow;
+        }
+    </style>
+
 
 </head>
 <body>
@@ -64,7 +78,11 @@
     <div id="react-root-4"></div>
     <script type="text/babel">
     
-        var Bonjour = () =>(<h1>Bonjour React - Functional Component !</h1>)
+        var Bonjour = () =>(
+            <div id="compBonjour">
+                <h1 className="backgroundTtre" >Bonjour React - Functional Component !</h1>
+            </div>    
+            )
     
         ReactDOM.render(
             <Bonjour/>,
