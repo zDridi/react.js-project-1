@@ -22,10 +22,10 @@
     <!-- Sans JSX -->
     <div id="react-root"></div>
     <script>    
-            ReactDOM.render(
-                React.createElement('h1',null,"Bonjour React !"),
-                document.getElementById('react-root')
-            )
+        ReactDOM.render(
+            React.createElement('h1',null,"Bonjour React !"),
+            document.getElementById('react-root')
+        )
     </script>
 
     
@@ -37,6 +37,26 @@
     
             <h1> Bonjour React et JSX ! </h1>,
             document.getElementById('react-root-2')
+        )
+    </script>
+
+
+    <!-- Avec les composants -->
+    <div id="react-root-3"></div>
+    <script type="text/babel">
+        class Bonjour extends React.Component{
+            render(){
+                return (
+                    <div>
+                        <h1>Bonjour Composant React ! </h1>
+                    </div>    
+                    )
+            }
+        }
+    
+        ReactDOM.render(
+            <Bonjour/>,
+            document.getElementById('react-root-3')
         )
     </script>
     
