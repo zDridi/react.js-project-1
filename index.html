@@ -25,6 +25,14 @@
         .backgroundTtre{
             background-color: yellow;
         }
+
+        div{
+            border-style: solid;
+            border-width: 2px;
+            border-color:green;
+
+            margin: 4px;
+        }
     </style>
 
 
@@ -89,6 +97,27 @@
             document.getElementById('react-root-4')
         )
     </script>    
+
+    <!-- Proprietes des composants de classe - donnees dynamiques-->
+    <div id="react-root-5"></div>
+    <script type="text/babel">
+    
+        class Bonjour extends React.Component{
+            render(){
+                return (
+                    <div>
+                        <h1>{this.props.message}</h1>
+                        <p>Vous apprenez ici la version {this.props.version} de React.js</p>
+                    </div>    
+                    )
+            }
+        }
+    
+        ReactDOM.render(
+            <Bonjour message="Bonjour props.message de React !" version={16} />,
+            document.getElementById('react-root-5')
+        )
+    </script>   
     
 </body>
 </html>
