@@ -144,7 +144,41 @@
             <Bonjour message="Bonjour props.message de composant fonctionnel - React !" version={16} />,
             document.getElementById('react-root-6')
         )
-    </script>   
+    </script>
+    
+    <!-- Les états (sur les composants de classe seulement)- donnees dynamiques-->
+    <div id="react-root-7"></div>
+    <script type="text/babel">
+    
+        class Bonjour extends React.Component{ // React.Component est le composant de base, qui provient de la librairie React
+
+            constructor(props){ // l'objet props correspond aux propriétés "message" et "version" dans le tag <Bonjour /> dans ReactDOM.render()
+
+                super(props)    // pour passer l'objet props au composant de base (React.Component)
+
+                this.state = {          // on crée l'objet state, et on peut ajouter des élements dans cet objet
+                    prenom : "Zied",
+                    nom : "Dridi"
+                }
+            }
+
+
+            render(){
+                return (
+                    <div>
+                        <h1>{this.props.message}</h1>
+                        <p>Bonjour {this.state.prenom} {this.state.nom}, vous apprenez ici la version {this.props.version} de React.js</p>
+                      
+                    </div>    
+                    )
+            }
+        }
+    
+        ReactDOM.render(
+            <Bonjour message="Bonjour les états de composant - React !" version={16} />,
+            document.getElementById('react-root-7')
+        )
+    </script>     
     
 </body>
 </html>
