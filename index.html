@@ -160,15 +160,21 @@
                     prenom : "Zied",
                     nom : "Dridi"
                 }
+                this.handleChange = this.handleChange.bind(this)
             }
 
+            handleChange(e){
+                this.setState({
+                    prenom : e.target.value,
+                })
+            }
 
             render(){
                 return (
                     <div>
                         <h1>{this.props.message}</h1>
                         <p>Bonjour {this.state.prenom} {this.state.nom}, vous apprenez ici la version {this.props.version} de React.js</p>
-                      
+                        <p> Taper le prenom ici : <input type="text" value={this.state.prenom} onChange={this.handleChange} /></p>
                     </div>    
                     )
             }
