@@ -86,7 +86,7 @@
     <div id="react-root-4"></div>
     <script type="text/babel">
     
-        var Bonjour = () =>(
+        var Bonjour = () => (
             <div id="compBonjour">
                 <h1 className="backgroundTtre" >Bonjour React - Functional Component !</h1>
             </div>    
@@ -124,13 +124,22 @@
     <div id="react-root-6"></div>
     <script type="text/babel">
     
-        const Bonjour = (props) =>(
+        /* avec l'objet props */
+        // const Bonjour = (props) => (
+        //     <div>
+        //         <h1>{props.message}</h1>
+        //         <p>Vous apprenez ici la version {props.version} de React.js</p>
+        //     </div>    
+        // )
+    
+        /* objet props destructuré */
+        const Bonjour = ({message, version}) => (
             <div>
-                <h1>{props.message}</h1>
-                <p>Vous apprenez ici la version {props.version} de React.js</p>
+                <h1>{message}</h1>
+                <p>Vous apprenez ici la version {version} de React.js</p>
             </div>    
         )
-    
+
         ReactDOM.render(
             <Bonjour message="Bonjour props.message de composant fonctionnel - React !" version={16} />,
             document.getElementById('react-root-6')
